@@ -1,0 +1,696 @@
+% About osp document
+% GUI "GUIName China" Layout
+%  1 -- FlowLayout
+%  2 -- GridLayout
+%  3 -- BorderLayout ( not used )
+%  4 -- CardLayout 
+%  5 -- GridBagLayout 
+%
+      
+  Frame I001 "OSP Parameter Setup" 800 600 1
+   TabPanel I010 "General Information" 1 1 0 95 55
+     ScrollPanel I011 "General" 10 0 1 90 90
+      Panel I011000a "General" 10 0 5 90 90
+      Label  I012 "Print Simulation Messages?" 1 1 5
+      Label  I014 "Print Modules' Messages?" 1 2 5
+      Label  I016 "Simulation Length" 1 3 5
+      Label  I017 "Number of Snapshots" 1 4 5
+      Label  I018 "Log File" 1 5 5
+      CHECKBOX I013 "Yes" 2 1 5
+      CHECKBOX I015 "Yes" 2 2 5
+      TEXTFIELD I01a "400" 2 3 5  7 
+      TEXTFIELD I01b "100" 2 4 5  3 
+      TEXTFIELD I01c "100" 2 5 5  8 
+      Label  I019 "Ticks " 3 3 5
+
+      Label  I01d "General Event Ratios" 10 1 5 black
+      Label  I01e "Ticks Between Events" 10 2 5
+      Label  I01f "Memory Events" 10 3 5
+      Label  I01g "File System Events" 10 4 5
+      Label  I01h "Port Events" 10 5 5
+      label  I01hr "Resource Events" 10 6 5
+      TEXTFIELD I01i "50" 11 2 5  3 
+      TEXTFIELD I01j "50" 11 3 5  3 
+      TEXTFIELD I01k "50" 11 4 5  3 
+      TEXTFIELD I01l "50" 11 5 5  3 
+      TEXTFIELD I011t "50" 11 6 5 3      
+
+      Label  I01m "%" 12 3 5
+      Label  I01n "%" 12 4 5
+      Label  I01o "%" 12 5 5
+      Label I01or "%" 12 6 5
+
+      Label  I01q "  0%" 14 5 5
+      Label  I01r "100%" 14 3 5
+      Label  I01p "0" 15 4 5
+      Label  I01t "%" 16 4 5
+      PROGRESSBAR I01s V 14 4 5 1 0 1 0 100 11 3
+
+     END
+     END
+
+     ScrollPanel I021 "Hardware" 30 0 1 90 90
+     Panel I0210000a "Hardware" 30 0 5 90 90
+      Label  I025 "Memory" 1 1 5 black
+      Label  I026 "Page/Block Size" 1 2 5
+      COMBOBOX I027 5 3 2 5  "256 bytes" "512 Bytes" "1 kB" "2 kB"  "4 kB" 2
+      Label  I028 "Virtual Address Size" 1 4 5
+      TEXTFIELD I029 "30" 3 4 5  4 0
+      Label  I02a "bits" 4 4 5
+      Label  I02b "RAM Size" 1 6 5
+      TEXTFIELD I02c "50" 3 6 5  8 
+      Label  I02d "page frames" 4 6 5
+
+      Label  I0211 "Disks" 20 1 5 black
+      COMBOBOX I0212 1 20 2 5 "Swap Device" 1
+      Label  I0213 "Platters" 20 4 5
+      Label  I0214 "Tracks per Platter" 20 6 5
+      Label  I0215 "Sectors per Track" 20 7 5
+      Label  I0216 "Bytes per Sector" 20 8 5 
+      Label  I0217 "Revolutions per tick" 20 9 5
+      Label  I0218 "Seek Time per cylinder" 20 10 5
+
+      TEXTFIELD I021b "50" 23 4 5  8 0
+      TEXTFIELD I021c "50" 23 6 5  8 0
+      TEXTFIELD I021d "50" 23 7 5  8 0
+      TEXTFIELD I021e "50" 23 8 5  8 0
+      TEXTFIELD I021f "50" 23 9 5  8 0
+      TEXTFIELD I021g "50" 23 10 5 8 0
+
+      BUTTON I0221 "Add Disk" 20 11 5 0
+      BUTTON I0222 "Remove Disk" 20 12 5 0
+     END
+     END
+
+     ScrollPanel I031 "File System" 15 0 5 90 90
+     Panel I031000a "File System" 15 0 5 90 90
+      Label  I032 "File System Ratios" 1 1 5 black
+      Label  I033 "File Operations" 1 2 5
+      Label  I034 "Directory Operations" 1 3 5
+      TEXTFIELD I035 "50" 2 2 5  4 
+      TEXTFIELD I036 "50" 2 3 5  4 
+      Label  I037 "%" 3 2 5
+      Label  I038 "%" 3 3 5
+      Label  I039 "100%" 4 2 5
+      Label  I03a "100" 5 3 5
+      Label  I03aa "% " 6 3 5
+      Label  I03b "  0%" 4 4 5
+      PROGRESSBAR I03c V 4 3 5 1 0 1 0 100 11 3
+ 
+      Label  I0312 "File Operations" 1 6 5 black
+      Label  I0313 "Create" 1 7 5
+      Label  I0314 "Delete" 1 8 5
+      Label  I0315 "Open" 1 9 5
+      Label  I0316 "Close" 1 10 5
+      Label  I0317 "Read" 1 11 5
+      Label  I0318 "Write" 1 12 5
+      Label  I0319 "Link" 1 13 5
+      TEXTFIELD I031a "50" 2 7 5  4 
+      TEXTFIELD I031b "50" 2 8 5  4 
+      TEXTFIELD I031c "50" 2 9 5  4 
+      TEXTFIELD I031d "50" 2 10 5  4 
+      TEXTFIELD I031e "50" 2 11 5  4 
+      TEXTFIELD I031f "50" 2 12 5  4 
+      TEXTFIELD I031g "50" 2 13 5  4 
+      Label  I031h "%" 3 7 5
+      Label  I031i "%" 3 8 5
+      Label  I031j "%" 3 9 5
+      Label  I031k "%" 3 10 5
+      Label  I031l "%" 3 11 5
+      Label  I031m "%" 3 12 5
+      Label  I031n "%" 3 13 5
+      Label  I031o "100%" 4 7 5
+      Label  I031p "  0%" 4 13 5
+      Label  I031q "100" 5 10 5
+      Label  I031qu "% "   6 10 5
+      PROGRESSBAR I031r V 4 8 5 1 0 5 0 100 11 3
+
+      Label  I0322 "Directory Operations" 20 6 5 black
+      Label  I0323 "Create" 20 7 5
+      Label  I0324 "Delete" 20 8 5
+      Label  I0325 "List" 20 9 5
+      TEXTFIELD I0326 "50" 22 7 5  4 
+      TEXTFIELD I0327 "50" 22 8 5  4 
+      TEXTFIELD I0328 "50" 22 9 5  4 
+      Label  I0329 "%" 24 7 5
+      Label  I032a "%" 24 8 5
+      Label  I032b "%" 24 9 5
+      Label  I032c "100%" 25 7 5
+      Label  I032d "  0%" 25 9 5
+      Label  I032e "100" 26 8 5
+      Label  I032g "%" 27 8 5
+      PROGRESSBAR I032f V 25 10 5 1 0 1 0 100 11 3
+     END
+     END
+
+     ScrollPanel I041 "Memory" 10 0 1 90 90
+     Panel I0410000a "Memory" 10 0 5 90 90
+      Label  I042 "Memory Operations" 1 1 5 black
+      Label  I043 "Memory Reads" 1 2 5
+      Label  I044 "Memory Writes" 1 3 5
+      TEXTFIELD I045 "50" 2 2 5  6 
+      TEXTFIELD I046 "50" 2 3 5  6 
+      Label  I047 "%" 3 2 5
+      Label  I048 "%" 3 3 5
+      Label  I04a "  0%" 4 4 5
+      Label  I04b "100%" 4 1 5
+      Label  I049 "0" 6 3 5
+      Label  I04d "% " 7 3 5
+      PROGRESSBAR I04c V 4 2 5 1 0 2 0 100 11 3
+      Label  I046l "Use Local Memory Access Pattern?" 1 6 5
+      CHECKBOX I046m "Yes" 2 6 5
+     END
+     END
+
+     ScrollPanel I051 "Ports" 10 0 1 90 90
+     Panel I0510000a "Ports" 10 0 5 90 90
+      Label  I052 "Port Operations" 1 1 5 black
+      Label  I053 "Port Create" 1 2 5
+      Label  I054 "Port Destroy" 1 3 5
+      Label  I055 "Send Message" 1 4 5
+      Label  I056 "Receive Message" 1 5 5
+      TEXTFIELD I057 "50" 2 2 5  6 
+      TEXTFIELD I058 "50" 2 3 5  6 
+      TEXTFIELD I059 "50" 2 4 5  6 
+      TEXTFIELD I05a "50" 2 5 5  6 
+      Label  I05b "%" 3 2 5
+      Label  I05c "%" 3 3 5
+      Label  I05d "%" 3 4 5
+      Label  I05e "%" 3 5 5
+      Label  I05g "  0%" 4 5 5
+      Label  I05h "100%" 4 2 5
+      Label  I05f "100" 6 4 5
+      Label  I05j "% " 7 4 5
+      PROGRESSBAR I05i V 4 3 5 1 0 2 0 100 11 3
+
+      Label  I0512 "Ports Configuration" 10 1 5 black
+      Label  I0513 "Maximum Ports Per Task" 10 2 5
+      Label  I0514 "Average length of Messages" 10 3 5
+      Label  I0515 "Port Buffer Length" 10 4 5
+
+      TEXTFIELD I0518 "50" 12 2 5  6 
+      TEXTFIELD I0519 "50" 12 3 5  6 
+      TEXTFIELD I051a "50" 12 4 5  6 
+     END
+     END
+      ScrollPanel I055r "Resources" 10 0 1 90 90
+        Panel I055r0a "Resources" 10 0 5 90 90
+          Label I055r0b "Resource Operations" 1 1 5 black
+          Label I055r0c "Resource Acquire" 1 2 5
+          Label I055r0d "Resource Release" 1 3 5
+          TEXTFIELD I056r0a "50" 2 2 5 6
+          TEXTFIELD I056r0b "50" 2 3 5 6
+          label I057r0a "%  " 3 2 5
+          label I057r0b "%  " 3 3 5
+%% for resource prorgess bar
+          Label  I055r0 "  0%" 4 4 5
+          Label  I055r1 "100%" 4 1 5
+          Label  I055rr "100" 5 3 5
+          Label  I055rj "%" 6 3 5
+          PROGRESSBAR I055ri V 4 2 5 1 0 2 0 100 11 3
+
+          Label I058r00 "Resources Configuration" 10 0 5 black
+          Label I059r0b0 "Deadlock Detection Interval" 10 10 5
+          Label I059r0a "Max Instances per Resource" 10 3 5
+          Label I059r0b "Resource Table Size" 10 2 5
+          Label I059r0c "Deadlock Handling Mode" 10 6 5
+	  COMBOBOX I059r0ct 2 11 6 5  "Avoidance" "Detection" 2
+          TEXTFIELD I059r0at "50" 11 3 5 6
+          TEXTFIELD I059r0bt "50" 11 2 5 6
+          TEXTFIELD I059r0dt "50" 11 10 5 6
+
+ 
+        END
+      END   
+
+      ScrollPanel I060 "Tasks/Threads" 10 0 1 90 90
+      Panel I0600000a "Tasks/Threads" 15 0 5 90 90
+      Label  I061 "Tasks" 1 1 5 black
+      Label  I062 "Maximum Number of Tasks" 1 2 5
+      Label  I063 "Average Number of Tasks" 1 3 5
+      Label  I064 "Task Life Expectancy" 1 4 5
+      TEXTFIELD I065 "50" 2 2 5  5 
+      TEXTFIELD I066 "50" 2 3 5  5 
+      TEXTFIELD I067 "50" 2 4 5  5 0
+      Label  I068 "ticks  " 3 4 5
+ 
+      Label  I06a "Threads" 6 1 5 black
+      Label  I06b "Maximum Threads Per Task" 6 2 5
+      Label  I06c "Average Number of Threads" 6 3 5
+      Label  I06d "Thread Life Expectancy" 6 4 5
+      TEXTFIELD I06e "50" 7 2 5  5 
+      TEXTFIELD I06f "50" 7 3 5  5 
+      TEXTFIELD I06g "50" 7 4 5  5 
+      Label  I06h "ticks" 8 4 5
+     END
+     END
+
+    END
+
+    RootPanel I031 "Error Messages" 2 2 0 95 20 B
+      ScrollPanel I032 "Messages" 10 0 0 90 90
+        TextArea I090 "xxx" 5 20 0 0
+      End
+    End 
+
+    Panel I040 "Start Buttons" 3 3 1 95 8
+     BUTTON I092 "Load Parameters" 1 1 0 0
+     BUTTON I093 "Save Parameters" 1 2 0 0
+     BUTTON I094 "Run" 1 3 0 0
+     BUTTON I095 "Quit" 1 3 0 1
+    End
+
+  End
+
+% The second Frame...
+  Frame I101 "OSP Run" 700 700 1
+   Panel I1000 "Alert" 3 3 1 95 3
+     Label  I1000a "To start simulation, press the START button" 1 1 5 black
+   End
+
+   RootPanel I110 "Simulation Messages" 1 1 0 95 30 B
+     ScrollPanel I111 "Simulation Messages" 10 0 1 90 90
+       TEXTAREA I112 "" 8 8 0  0
+     End
+   End
+     
+   ScrollPanel I120 "Statistics" 2 2 0 95 50 
+    Panel I1200000b "Statistics" 2 2 5 95 95
+     Label  I121 "Simulation Progress" 1 1 5 blue
+     Label  I122 "Event Totals:  " 1 2 5 blue
+     Label  I123 "  Thread Creates" 1 3 5
+     Label  I124 "  Thread Kills" 1 4 5
+     Label  I126 "  Task Creates" 1 5 5
+     Label  I127 "  Task Kills" 1 6 5
+     Label  I128 "" 1 7 5
+     Label  I129 "  Memory Reads" 1 8 5
+     Label  I12a "  Memory Writes" 1 9 5
+     Label  I111li "  Swap-ins" 1 10 5
+     Label  I111lo "  Swap-outs" 1 11 5
+     Label  I12b "" 1 12 5
+     Label  I12c "  File Creates" 1 13 5
+     Label  I12d "  File Deletes" 1 14 5
+     Label  I12e "  File Opens" 1 15 5
+     Label  I12f "  File Closes" 1 16 5
+     Label  I12g "  File Reads" 1 17 5
+     Label  I12h "  File Writes" 1 18 5
+     Label  I12i "  File Links" 1 19 5
+     Label  I12j "  Directory Creates" 1 20 5
+     Label  I12k "  Directory Deletes" 1 21 5
+     Label  I12l "  Directory Listings" 1 22 5
+     Label  I125 "" 1 23 5
+     Label  I12m "  Port Creates" 1 24 5
+     Label  I12n "  Port Destroys" 1 25 5
+     Label  I12o "  Port Sends" 1 26 5
+     Label  I12p "  Port Receives" 1 27 5
+
+     Label  I12q "  Resource Acquisitions" 1 28 5
+     Label  I12r "  Resource Releases" 1 29 5  
+    
+ 
+     PROGRESSBAR I1211 H 2 1 5 25 4 1 0 100 11 2 orange
+
+     PROGRESSBAR I1213 H 2 3 5 25 4 1 0 100 11 2
+     PROGRESSBAR I1214 H 2 4 5 25 4 1 0 100 11 2
+     PROGRESSBAR I1216 H 2 5 5 25 4 1 0 100 11 2
+     PROGRESSBAR I1217 H 2 6 5 25 4 1 0 100 11 2
+
+     PROGRESSBAR I1219 H 2 8 5 25 4 1 0 100 11 2
+     PROGRESSBAR I121a H 2 9 5 25 4 1 0 100 11 2
+     PROGRESSBAR I11bi H 2 10 5 25 4 1 0 100 11 2
+     PROGRESSBAR I11bo H 2 11 5 25 4 1 0 100 11 2
+     PROGRESSBAR I121c H 2 13 5 25 4 1 0 100 11 2
+     PROGRESSBAR I121d H 2 14 5 25 4 1 0 100 11 2
+     PROGRESSBAR I121e H 2 15 5 25 4 1 0 100 11 2
+     PROGRESSBAR I121f H 2 16 5 25 4 1 0 100 11 2
+     PROGRESSBAR I121g H 2 17 5 25 4 1 0 100 11 2
+     PROGRESSBAR I121h H 2 18 5 25 4 1 0 100 11 2
+     PROGRESSBAR I121i H 2 19 5 25 4 1 0 100 11 2
+     PROGRESSBAR I121j H 2 20 5 25 4 1 0 100 11 2
+     PROGRESSBAR I121k H 2 21 5 25 4 1 0 100 11 2
+     PROGRESSBAR I121l H 2 22 5 25 4 1 0 100 11 2
+
+     PROGRESSBAR I121m H 2 24 5 25 4 1 0 100 11 2
+     PROGRESSBAR I121n H 2 25 5 25 4 1 0 100 11 2
+     PROGRESSBAR I121o H 2 26 5 25 4 1 0 100 11 2
+     PROGRESSBAR I121p H 2 27 5 25 4 1 0 100 11 2
+
+     PROGRESSBAR I121q H 2 28 5 25 4 1 0 100 11 2
+     PROGRESSBAR I121r H 2 29 5 25 4 1 0 100 11 2
+
+     Label  I1221 "100" 53 1 5
+
+     Label  I1223 "100" 53 3 5
+     Label  I1224 "100" 53 4 5
+     Label  I1226 "100" 53 5 5
+     Label  I1227 "100" 53 6 5
+
+     Label  I1229 "100" 53 8 5
+     Label  I122a "100" 53 9 5
+     Label  I11si "100" 53 10 5
+     Label  I11so "100" 53 11 5
+
+     Label  I122c "100" 53 13 5
+     Label  I122d "100" 53 14 5
+     Label  I122e "100" 53 15 5
+     Label  I122f "100" 53 16 5
+     Label  I122g "100" 53 17 5
+     Label  I122h "100" 53 18 5
+     Label  I122i "100" 53 19 5
+     Label  I122j "100" 53 20 5
+     Label  I122k "100" 53 21 5
+     Label  I122l "100" 53 22 5
+
+     Label  I122m "100" 53 24 5
+     Label  I122n "100" 53 25 5
+     Label  I122o "100" 53 26 5
+     Label  I122p "100" 53 27 5
+
+     Label  I122q "100" 53 28 5
+     Label  I122r "100" 53 29 5
+
+     Label  I1231 "100" 55 1 5 blue 
+     Label  I1232 "/" 54 1 5 blue
+
+
+
+
+    END
+    END
+
+    Panel I130 "tone" 3 3  1 95 8
+     BUTTON I132 "Start" 1 1 0 0
+     BUTTON I133 "Back" 1 2 0 0
+    End
+  
+  END   
+
+
+  START I001
+
+  ACTION 
+
+   
+  SECTION "General"
+   BOOL   "SimulationOutputFlag" 
+   BOOL   "ModuleOutputFlag"
+   INT    "SimulationLength" 50000 1000000 
+   INT    "NumberOfSnapshots" 2 70 
+   INT    "AverageTicksBetweenEvents" 20 1000
+   INT    "MemoryEventPercentage" 5 100 
+   INT    "FileSysEventPercentage" 0 100 
+   INT    "PortEventPercentage" 0 100 
+   INT    "ResourceEventPercentage" 0 100
+
+   STRING "LogFile"
+
+  SECTION "FileSys"
+   INT    "FilesEventPercentage" 0 100 
+   INT    "DirsEventPercentage" 0 100
+   INT    "CreateFilePercentage" 0 100 
+   INT    "OpenFilePercentage" 0 100
+   INT    "CloseFilePercentage" 0 100 
+   INT    "DeleteFilePercentage" 0 100
+   INT    "ReadFilePercentage" 0 100 
+   INT    "WriteFilePercentage" 0 100
+   INT    "LinkFilePercentage" 0 100 
+   INT    "CreateDirPercentage" 0 100 
+   INT    "DeleteDirPercentage" 0 100
+   INT    "ListDirPercentage" 0 100 
+
+  SECTION "Tasks"
+   INT    "AverageNumberOfTasks" 1 200 
+   INT    "#TaskLifeExpectancy" 500 100000
+   INT    "MaxTasks" 1 200
+
+  SECTION "Threads"
+   INT    "ThreadLifeExpectancy" 500 100000
+   INT    "AverageNumberOfThreads" 1 400
+   INT    "MaxThreadsPerTask" 1 200 
+
+  SECTION "Memory"
+   INT    "MemoryReadPercentage" 0 100 
+   INT    "MemoryWritePercentage" 0 100
+   BOOL   "UseLocalAccessPattern"
+   INT    "#PageAddressBitsSel" 0 100 
+   INT    "FramesOfPhysicalMemory" 0 64
+   INT    "#VirtualAddressBits" 0 100
+   INT    "PageAddressBits" 0 100
+   
+  SECTION "Ports"
+   INT    "PortCreatePercentage" 0 100
+   INT    "PortDestroyPercentage" 0 100
+   INT    "PortSendPercentage" 0 100
+   INT    "PortReceivePercentage" 0 100
+   INT    "MaxPortsPerTask" 1 40
+   INT    "MeanMessageLength" 1 100 
+   INT    "PortBufferLength" "MeanMessageLength" 100 
+
+  SECTION "Devices"
+   INT    "NumberOfDevices" 0 100
+   INT    "Disk?NumberOfPlatters" 0 100
+   INT    "Disk?TracksPerPlatter" 0 200
+   INT    "Disk?SectorsPerTrack" 0 200
+   INT    "Disk?BytesPerSector" 512 512
+   INT    "Disk?RevolutionsPerTick" 0 100
+   INT    "Disk?SeekTimePerCylinder" 0 200
+
+  SECTION "Resources"
+   INT    "ResourceAcquirePercentage" 0 100
+   INT    "ResourceReleasePercentage" 0 100
+   INT    "MaxResourceInstance" 1 100
+   INT    "ResourceTableSize" 1 100
+   INT    "DeadlockMethod" 0 1
+   INT    "DetectionInterval" 0 200000
+
+   def    "ResourceEventPercentage"  I011t
+   def    "ResourceAcquirePercentage" I056r0a
+   def    "ResourceReleasePercentage" I056r0b
+
+   DEF SUM V555 100 100 "ResourceReleasePercentage" "ResourceAcquirePercentage"
+   def    V555 I055rr I055ri ER I055r0b
+   
+
+   def    "MaxResourceInstance" I059r0at
+   def    "ResourceTableSize" I059r0bt
+   def    "DeadlockMethod" I059r0ct
+   def    "DetectionInterval" I059r0dt
+
+   def    "PortCreatePercentage" I057
+   def    "PortDestroyPercentage" I058
+   def    "PortSendPercentage" I059
+   def    "PortReceivePercentage" I05a
+   def    "MaxPortsPerTask" I0518
+   def    "MeanMessageLength" I0519 ER I0514
+   def    "PortBufferLength" I051a ER I0515
+   def sum  V5091 100 100 "PortCreatePercentage" "PortDestroyPercentage" "PortSendPercentage" "PortReceivePercentage"
+   def    V5091 I05f I05i ER I052
+
+   DEF    "SimulationOutputFlag" I013
+   DEF    "ModuleOutputFlag" I015
+   DEF    "SimulationLength" I01a ER I016
+   DEF    "NumberOfSnapshots" I01b ER I017
+   DEF    "AverageTicksBetweenEvents" I01i ER I01e
+   DEF    "MemoryEventPercentage" I01j ER I01d
+   DEF    "FileSysEventPercentage" I01k ER I01d
+   DEF    "PortEventPercentage" I01l ER I01d
+   DEF SUM V008 100 100 "MemoryEventPercentage" "FileSysEventPercentage" "PortEventPercentage" "ResourceEventPercentage"
+   DEF    V008 I01s I01p ER I01d
+   DEF    "LogFile" I01c 
+
+   DEF    "FilesEventPercentage" I035 ER I033
+   DEF    "DirsEventPercentage" I036 ER I034
+   DEF SUM V103 100 100 "FilesEventPercentage" "DirsEventPercentage"
+   DEF    V103 I03c I03a ER I032
+   DEF    "CreateFilePercentage" I031a ER I0312
+   DEF    "DeleteFilePercentage" I031b ER I0312
+   DEF    "OpenFilePercentage" I031c ER I0312 
+   DEF    "CloseFilePercentage" I031d ER I0312
+   DEF    "ReadFilePercentage" I031e ER I0312
+   DEF    "WriteFilePercentage" I031f ER I0312
+   DEF    "LinkFilePercentage" I031g ER I0312
+   DEF SUM V113 100 100 "CreateFilePercentage" "OpenFilePercentage" \
+            "CloseFilePercentage" "DeleteFilePercentage" "ReadFilePercentage" \
+            "WriteFilePercentage" "LinkFilePercentage"
+   DEF    V113 I031r I031q ER I0312 
+   DEF    "CreateDirPercentage" I0326 ER I0322
+   DEF    "DeleteDirPercentage" I0327 ER I0322
+   DEF    "ListDirPercentage" I0328 ER I0322
+   DEF SUM V117 100 100 "CreateDirPercentage" "DeleteDirPercentage" "ListDirPercentage" 
+   DEF    V117 I032f I032e ER I0322
+
+   DEF    "AverageNumberOfTasks" I066 ER I063
+   DEF    "#TaskLifeExpectancy" I067 ER I064
+   DEF    "MaxTasks" I065 ER I062
+
+   DEF    "ThreadLifeExpectancy" I06g ER I06d
+   DEF    "AverageNumberOfThreads" I06f ER I06c
+   DEF    "MaxThreadsPerTask" I06e ER I06b 
+
+   DEF    "MemoryReadPercentage" I045 ER I042
+   DEF    "MemoryWritePercentage" I046 ER I042
+   DEF    "UseLocalAccessPattern" I046m
+   DEF    "#PageAddressBitsSel" I027 
+   DEF SUM  V405 100 100 "MemoryReadPercentage" "MemoryWritePercentage"
+   DEF    V405 I04c I049 ER I042
+   DEF    "#VirtualAddressBits" I029 ER I028
+   DEF    "FramesOfPhysicalMemory" I02c ER I02b
+  
+   DEF    "Disk?NumberOfPlatters" I021b ER I0213
+   DEF    "Disk?TracksPerPlatter" I021c ER I0214
+   DEF    "Disk?SectorsPerTrack" I021d ER I0215
+   DEF    "Disk?RevolutionsPerTick" I021f ER I0217
+   DEF    "Disk?SeekTimePerCylinder" I021g ER I0218
+   DEF    "Disk?BytesPerSector" I021e ER I0216
+
+   DEF    "SimulationLength" I1231
+
+
+   ASSOC "DiskComboBoxGroup" I0212 I021b I021c I021d I021f I021g
+
+   BUTACT I094 4 I101 
+   BUTACT I092 2 I001 
+   BUTACT I093 3 I001 
+   BUTACT I133 6 I001 
+   BUTACT I132 5 I132 I133
+   BUTACT I0221 33 "DiskComboBoxGroup" 
+   BUTACT I0222 34 "DiskComboBoxGroup" 
+
+   ALU V801   "ThreadLifeExpectancy" "SimulationLength" DIV  \
+	      "AverageNumberOfThreads" MUL
+   ALU V802   V801 
+   ALU V803   "#TaskLifeExpectancy" "SimulationLength" DIV  \
+	      "AverageNumberOfTasks" MUL
+   ALU V804   V803
+
+% The numbers 10000, 1000000, etc. are used to convert percentages into ratios
+% For instance, if we multiply by two percentage parameters, then we should
+% divide by 10000. If we multiply by 3 percentage parameters, then we divide
+% by 1000000
+% In some cases, we add 5 percentage points to the calculations. This
+% happens for the events where the corresponding events would happen
+% regardless, due to some other events in the system (e.g., file
+% opens/creates, etc. would happen due to swap-in/outs anyway).
+   ALU V805   10000 "MemoryEventPercentage" 5 ADD \
+		    "MemoryReadPercentage" 5 ADD \
+                    "AverageTicksBetweenEvents" "SimulationLength" DIV \
+		    MUL MUL DIV
+   ALU V806   10000 "MemoryEventPercentage" 5 ADD \
+		    "MemoryWritePercentage" 5 ADD \
+                    "AverageTicksBetweenEvents" "SimulationLength" DIV \
+		    MUL MUL DIV
+
+   ALU V8si   V805 V806 ADD
+   ALU V8so   2 V805 V806 ADD DIV
+
+   ALU V807   V803 1000000 "CreateFilePercentage" 5 ADD \
+			   "FilesEventPercentage" 5 ADD \
+			   "FileSysEventPercentage" 5 ADD \
+			   "AverageTicksBetweenEvents" "SimulationLength" DIV \
+			   MUL MUL MUL DIV
+   ALU V808   V804 1000000 "DeleteFilePercentage" 5 ADD \
+			   "FilesEventPercentage" 5 ADD \
+			   "FileSysEventPercentage" 5 ADD \
+			   "AverageTicksBetweenEvents" "SimulationLength" DIV \
+			   MUL MUL MUL DIV
+   ALU V809   1000000 "OpenFilePercentage" 5 ADD \
+		      "FilesEventPercentage" 5 ADD \
+		      "FileSysEventPercentage" 5 ADD \
+		      "AverageTicksBetweenEvents" "SimulationLength" DIV \
+		      MUL MUL MUL DIV
+   ALU V810   1000000 "CloseFilePercentage" 5 ADD \
+		      "FilesEventPercentage" 5 ADD \
+		      "FileSysEventPercentage" 5 ADD \
+		      "AverageTicksBetweenEvents" "SimulationLength" DIV \
+		      MUL MUL MUL DIV
+   ALU V811   1000000 "ReadFilePercentage" 5 ADD \
+		      "FilesEventPercentage" 5 ADD \
+		      "FileSysEventPercentage" 5 ADD \
+		      "AverageTicksBetweenEvents" "SimulationLength" DIV \
+		      MUL MUL MUL DIV
+   ALU V812   1000000 "WriteFilePercentage" 5 ADD \
+		      "FilesEventPercentage" 5 ADD \
+		      "FileSysEventPercentage" 5 ADD \
+		      "AverageTicksBetweenEvents" "SimulationLength" DIV \
+		      MUL MUL MUL DIV
+   ALU V813   1000000 "LinkFilePercentage" \
+		      "FilesEventPercentage" \
+		      "FileSysEventPercentage" \
+		      "AverageTicksBetweenEvents" "SimulationLength" DIV \
+		      MUL MUL MUL DIV
+
+   ALU V814   1000000 "CreateDirPercentage" 5 ADD \
+		      "DirsEventPercentage" 5 ADD \
+		      "FileSysEventPercentage" 5 ADD \
+		      "AverageTicksBetweenEvents" "SimulationLength" DIV \
+		      MUL MUL MUL DIV
+   ALU V815   1000000 "DeleteDirPercentage" 5 ADD \
+		      "DirsEventPercentage" 5 ADD \
+		      "FileSysEventPercentage" 5 ADD \
+		      "AverageTicksBetweenEvents" "SimulationLength" DIV \
+		      MUL MUL MUL DIV
+   ALU V816   1000000 "ListDirPercentage" \
+		      "DirsEventPercentage" \
+		      "FileSysEventPercentage" \
+		      "AverageTicksBetweenEvents" "SimulationLength" DIV \
+		      MUL MUL MUL DIV
+
+   ALU V817   10000 "PortCreatePercentage" \
+		    "PortEventPercentage" \
+		    "AverageTicksBetweenEvents" "SimulationLength" DIV \
+		    MUL MUL DIV
+   ALU V818   10000 "PortDestroyPercentage" 5 ADD \
+		    "PortEventPercentage" 5 ADD \
+		    "AverageTicksBetweenEvents" "SimulationLength" DIV \
+		    MUL MUL DIV
+   ALU V819   10000 "PortSendPercentage" \
+		    "PortEventPercentage" \
+		    "AverageTicksBetweenEvents" "SimulationLength" DIV \
+		    MUL MUL DIV
+   ALU V81a   10000 "PortReceivePercentage" \
+		    "PortEventPercentage" \
+		    "AverageTicksBetweenEvents" "SimulationLength" DIV \
+		    MUL MUL DIV
+
+  ALU V81b    10000 "ResourceAcquirePercentage" \
+                    "ResourceEventPercentage" \
+                    "AverageTicksBetweenEvents" "SimulationLength" DIV \
+                    MUL MUL DIV
+  ALU V81c    10000 "ResourceReleasePercentage" \  
+                    "ResourceEventPercentage" \  
+                    "AverageTicksBetweenEvents" "SimulationLength" DIV \
+                    MUL MUL DIV
+  
+% output  to the text and button
+   DYNSET I132 I1000a
+   
+   DINT   "CurrentTime" "SimulationLength"  I1211 I1221
+   DINT   "CountThreadCreate" V801  I1213 I1223
+   DINT   "CountThreadKill" V802  I1214 I1224
+   DINT   "CountTaskCreate" V803  I1216 I1226
+   DINT   "CountTaskKill" V804  I1217 I1227
+   DINT   "CountMemoryRead" V805  I1219 I1229
+   DINT   "CountMemoryWrite" V806  I121a I122a 
+   DINT   "CountSwapIns" V8si  I11bi I11si 
+   DINT   "CountSwapOuts" V8so  I11bo I11so 
+   DINT   "CountFileCreate" V807  I121c I122c 
+   DINT   "CountFileDelete" V808  I121d I122d
+   DINT   "CountFileOpen" V809  I121e I122e 
+   DINT   "CountFileClose" V810  I121f I122f 
+   DINT   "CountFileRead" V811  I121g I122g 
+   DINT   "CountFileWrite" V812  I121h I122h 
+   DINT   "CountFileLink" V813  I121i I122i 
+   DINT   "CountDirCreate" V814  I121j I122j 
+   DINT   "CountDirDelete" V815  I121k I122k 
+   DINT   "CountDirList" V816  I121l I122l 
+   DINT   "PortCreateCount" V817  I121m I122m 
+   DINT   "PortDestroyCount" V818  I121n I122n 
+   DINT   "PortSendCount" V819  I121o I122o 
+   DINT   "PortReceiveCount" V81a  I121p I122p 
+
+   DINT   "ResourceAcquireCount" V81b I121q I122q
+   DINT   "ResourceReleaseCount" V81c I121r I122r
+   
+
+  END
+
