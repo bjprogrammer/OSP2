@@ -1,0 +1,77 @@
+# Longer run, local memory access, more threads
+# deadlock detection
+
+[General]
+SimulationOutputFlag 1
+ModuleOutputFlag 1
+SimulationLength 650000
+NumberOfSnapshots 10
+AverageTicksBetweenEvents 55
+MemoryEventPercentage 27
+FileSysEventPercentage 36
+PortEventPercentage 27
+ResourceEventPercentage 10
+LogFile OSP.log
+
+[FileSys]
+FilesEventPercentage 80
+DirsEventPercentage 20
+CreateFilePercentage 15
+OpenFilePercentage 15
+CloseFilePercentage 10
+DeleteFilePercentage 10
+ReadFilePercentage 20
+WriteFilePercentage 20
+LinkFilePercentage 10
+CreateDirPercentage 40
+DeleteDirPercentage 10
+ListDirPercentage 50
+
+[Tasks]
+AverageNumberOfTasks 6
+MaxTasks 8
+
+[Threads]
+ThreadLifeExpectancy 4000
+AverageNumberOfThreads 26
+MaxThreadsPerTask 5
+
+[Memory]
+MemoryReadPercentage 40
+MemoryWritePercentage 60
+FramesOfPhysicalMemory 22
+PageAddressBits 6
+UseLocalAccessPattern 1
+
+[Ports]
+PortCreatePercentage 30
+PortDestroyPercentage 10
+PortSendPercentage 30
+PortReceivePercentage 30
+MaxPortsPerTask 1
+MeanMessageLength 2
+PortBufferLength 10
+
+[Devices]
+NumberOfDevices 3
+Disk1NumberOfPlatters 2
+Disk1TracksPerPlatter 10
+Disk1SectorsPerTrack 12
+Disk1RevolutionsPerTick 5
+Disk1SeekTimePerCylinder 30
+Disk2NumberOfPlatters 1
+Disk2TracksPerPlatter 40
+Disk2SectorsPerTrack 8
+Disk2RevolutionsPerTick 15
+Disk2SeekTimePerCylinder 70
+
+
+[Resources]
+# 0 means deadlock avoidance, 1 means deadlock detection
+DeadlockMethod 1
+DetectionInterval 50000
+MaxResourceInstance 5
+ResourceTableSize 6
+ResourceAcquirePercentage 60
+ResourceReleasePercentage 40   
+

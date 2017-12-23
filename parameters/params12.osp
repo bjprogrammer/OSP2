@@ -1,0 +1,72 @@
+# more threads, more memory, I/O, local memory access
+# fewer memory frames
+# deadlock avoidance
+
+[General]
+SimulationOutputFlag 1
+ModuleOutputFlag 1
+SimulationLength 300000
+NumberOfSnapshots 15
+AverageTicksBetweenEvents 65
+MemoryEventPercentage 38
+FileSysEventPercentage 35
+PortEventPercentage 20
+ResourceEventPercentage 7
+LogFile OSP.log
+
+[FileSys]
+FilesEventPercentage 70
+DirsEventPercentage 30
+CreateFilePercentage 15
+OpenFilePercentage 15
+CloseFilePercentage 15
+DeleteFilePercentage 15
+ReadFilePercentage 15
+WriteFilePercentage 15
+LinkFilePercentage 10
+CreateDirPercentage 40
+DeleteDirPercentage 10
+ListDirPercentage 50
+
+[Tasks]
+AverageNumberOfTasks 6
+MaxTasks 9
+
+[Threads]
+ThreadLifeExpectancy 5000
+AverageNumberOfThreads 25
+MaxThreadsPerTask 7
+
+[Memory]
+MemoryReadPercentage 30
+MemoryWritePercentage 70
+FramesOfPhysicalMemory 20
+PageAddressBits 6
+UseLocalAccessPattern 1
+
+[Ports]
+PortCreatePercentage 40
+PortDestroyPercentage 0
+PortSendPercentage 30
+PortReceivePercentage 30
+MaxPortsPerTask 1
+MeanMessageLength 2
+PortBufferLength 10
+
+[Devices]
+NumberOfDevices 2
+Disk1NumberOfPlatters 3
+Disk1TracksPerPlatter 30
+Disk1SectorsPerTrack 4
+Disk1RevolutionsPerTick 7
+Disk1SeekTimePerCylinder 55
+
+[Resources]
+# 0 means deadlock avoidance, 1 means deadlock detection
+DeadlockMethod 0
+DetectionInterval 20000
+MaxResourceInstance 13
+ResourceTableSize 6
+ResourceAcquirePercentage 58
+ResourceReleasePercentage 42   
+
