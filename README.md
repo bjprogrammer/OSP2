@@ -13,4 +13,12 @@ We have implemented following seven modules in our OSP2 project -
 • Resource Management 
 • Inter-process communication(Port) 
 
+
+We implemented following algorithms in this project-
+Thread: Non-preemptive FCFS, Round Robin, priority-driven preemptive scheduling, MultiLevel Feedback Queue
+
+Virtual Memory:  First in first out (FIFO), least recently used (LRU),Second Chance
+
+Devices: FCFS, SSTF
+
 We have performed detailed analysis by varying different parameters of a particular module in each run. Please go through report to find these observations.
