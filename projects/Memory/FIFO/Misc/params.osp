@@ -1,0 +1,76 @@
+# Normal length, fewer events, random memory access, many thread per task,
+# few tasks
+# deadlock detection
+
+[General]
+SimulationOutputFlag 1
+ModuleOutputFlag 1
+SimulationLength 250000
+NumberOfSnapshots 10
+AverageTicksBetweenEvents 70
+MemoryEventPercentage 40
+FileSysEventPercentage 30
+PortEventPercentage 20
+ResourceEventPercentage 10
+LogFile OSP.log
+
+[FileSys]
+FilesEventPercentage 80
+DirsEventPercentage 20
+CreateFilePercentage 15
+OpenFilePercentage 15
+CloseFilePercentage 15
+DeleteFilePercentage 15
+ReadFilePercentage 15
+WriteFilePercentage 15
+LinkFilePercentage 10
+CreateDirPercentage 40
+DeleteDirPercentage 10
+ListDirPercentage 50
+
+[Tasks]
+AverageNumberOfTasks 4
+MaxTasks 6
+
+[Threads]
+ThreadLifeExpectancy 5000
+AverageNumberOfThreads 13
+MaxThreadsPerTask 15
+
+[Memory]
+MemoryReadPercentage 50
+MemoryWritePercentage 50
+UseLocalAccessPattern 0
+FramesOfPhysicalMemory 30
+PageAddressBits 6
+
+[Ports]
+PortCreatePercentage 40
+PortDestroyPercentage 0
+PortSendPercentage 30
+PortReceivePercentage 30
+MaxPortsPerTask 2
+MeanMessageLength 2
+PortBufferLength 10
+
+[Devices]
+NumberOfDevices 3
+Disk1NumberOfPlatters 2
+Disk1TracksPerPlatter 10
+Disk1SectorsPerTrack 4
+Disk1RevolutionsPerTick 5
+Disk1SeekTimePerCylinder 15
+Disk2NumberOfPlatters 1
+Disk2TracksPerPlatter 8
+Disk2SectorsPerTrack 4
+Disk2RevolutionsPerTick 15
+Disk2SeekTimePerCylinder 150
+
+[Resources]
+# 0 means deadlock avoidance, 1 means deadlock detection
+DeadlockMethod 1
+DetectionInterval 20000
+MaxResourceInstance 10
+ResourceTableSize 5
+ResourceAcquirePercentage 55
+ResourceReleasePercentage 45
